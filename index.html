@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GirlsInTech LibraryManager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Landing Page -->
+    <div id="landingPage">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-book-open"></i>
+                        <h1>GirlsInTech Library</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#footer">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="auth-buttons">
+                        <button id="loginHeaderBtn" class="btn btn-outline">Log In</button>
+                        <button id="adminLoginHeaderBtn" class="btn btn-warning">Admin Login</button>
+                        <button id="registerHeaderBtn" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2>Modern Library Management Solution</h2>
+                <p>Efficiently manage your library's collection, track book issues and returns, and provide an exceptional experience for your patrons.</p>
+                <div class="hero-buttons">
+                    <button id="getStartedBtn" class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-outline" style="color: var(--secondary); border-color: var(--secondary);">View Demo</button>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5,000+</div>
+                        <div class="stat-label">Books Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">250+</div>
+                        <div class="stat-label">Libraries</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Powerful Features</h2>
+                    <p>Everything you need to efficiently manage your library's collection and operations</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h3>Add Books</h3>
+                        <p>Easily add new books to your library's collection with title, author, and ID information.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Search Books</h3>
+                        <p>Quickly find books by title, author, or ID with our powerful search functionality.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <h3>Display All Books</h3>
+                        <p>View your entire library collection in an organized, easy-to-browse format.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Issue & Return</h3>
+                        <p>Efficiently manage book circulation with our issue and return tracking system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>How It Works</h2>
+                    <p>Getting started with LibraryManager is simple and straightforward</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Sign Up</h3>
+                        <p>Create your account in just a few seconds</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Add Books</h3>
+                        <p>Start building your digital library catalog</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Manage</h3>
+                        <p>Start issuing books and managing returns</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What Our Users Say</h2>
+                    <p>Hear from librarians who are using our system</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "This system has transformed how we manage our library. The issue and return tracking has reduced our administrative work by 70%."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">KM</div>
+                            <div>
+                                <h4>Kusumlata Murmu</h4>
+                                <p>Public Library Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "The search functionality is incredibly fast and accurate. Patrons can now find books in seconds rather than minutes."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">BK</div>
+                            <div>
+                                <h4>Basanti Kumari</h4>
+                                <p>School Librarian</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            "Adding new books to the system is so simple. The intuitive interface makes training new staff members a breeze."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LK</div>
+                            <div>
+                                <h4>Lalsha Kumari</h4>
+                                <p>University Library Manager</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Transform Your Library Management?</h2>
+                <ul class="hero-features">
+                    <li><i class="fas fa-check"></i> Easy book cataloging and search</li>
+                    <li><i class="fas fa-check"></i> Member management system</li>
+                    <li><i class="fas fa-check"></i> Issue and return tracking</li>
+                    <li><i class="fas fa-check"></i> Advanced reporting tools</li>
+                    <li><i class="fas fa-check"></i> Multi-user support</li>
+                </ul>
+                <p>Join thousands of libraries already using our system to streamline their operations</p>
+                <button id="ctaGetStartedBtn" class="btn btn-primary">Get Started Today</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <h3>GirlsInTech LibraryManager</h3>
+                        <p>The modern solution for library management, designed for efficiency and ease of use.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><a href="#">Add Books</a></li>
+                            <li><a href="#">Search Books</a></li>
+                            <li><a href="#">Display All Books</a></li>
+                            <li><a href="#">Issue & Return</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Library HQ</li>
+                            <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@GirlsInTechlibrary.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; Develop By <strong>GirlsInTech</strong> Group.</p>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 GirlsInTech LibraryManager. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab">Login</div>
+                <div class="auth-tab" id="registerTab">Sign Up</div>
+            </div>
+            
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+            </form>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="newUsername">Username:</label>
+                    <input type="text" id="newUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">Password:</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="dashboard-title">
+                        <i class="fas fa-book-open"></i>
+                        <h1>LibraryManager</h1>
+                    </div>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="sidebar">
+                <button class="nav-btn active" data-target="overview"><i class="fas fa-tachometer-alt fa-fw"></i><span>Overview</span></button>
+                <button class="nav-btn" data-target="search"><i class="fas fa-search fa-fw"></i><span>Search Books</span></button>
+                <button class="nav-btn" data-target="display"><i class="fas fa-book fa-fw"></i><span>All Books</span></button>
+                <button class="nav-btn" data-target="issue"><i class="fas fa-upload fa-fw"></i><span>Issue Book</span></button>
+                <button class="nav-btn" data-target="return"><i class="fas fa-download fa-fw"></i><span>Return Book</span></button>
+                <button class="nav-btn" data-target="profile"><i class="fas fa-user fa-fw"></i><span>My Profile</span></button>
+                <button id="adminNavBtn" class="nav-btn hidden" data-target="admin"><i class="fas fa-user-shield fa-fw"></i><span>Admin Panel</span></button>
+            </div>
+            
+            <div class="content-area">
+                <!-- Dashboard Overview Section -->
+                <section id="overview" class="section active">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: var(--primary);"><i class="fas fa-book-open"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="totalBooksStat">0</div>
+                                <div class="stat-label">Total Books</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: var(--danger);"><i class="fas fa-hand-holding"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="issuedBooksStat">0</div>
+                                <div class="stat-label">Books Issued</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon" style="background-color: var(--success);"><i class="fas fa-check-circle"></i></div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="availableBooksStat">0</div>
+                                <div class="stat-label">Available Books</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Search Section -->
+                <section id="search" class="section">
+                    <h2>Search for a Book</h2>
+                    <div class="form-group">
+                        <input type="text" id="searchInput" placeholder="Enter title or ID">
+                        <button id="searchBtn" class="btn btn-primary" style="margin-top: 10px;">Search</button>
+                    </div>
+                    <div id="searchResults" class="search-results"></div>
+                </section>
+                
+                <!-- Display All Books Section -->
+                <section id="display" class="section">
+                    <h2>All Books</h2>
+                    <div id="allBooks"></div>
+                </section>
+                
+                <!-- Issue Book Section -->
+                <section id="issue" class="section">
+                    <h2>Issue a Book</h2>
+                    <form id="issueForm">
+                        <div class="form-group">
+                            <label for="issueBookId">Book ID:</label>
+                            <input type="text" id="issueBookId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="memberId">Username:</label>
+                            <input type="text" id="memberId" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Issue Book</button>
+                    </form>
+                </section>
+                
+                <!-- Return Book Section -->
+                <section id="return" class="section">
+                    <h2>Return a Book</h2>
+                    <form id="returnForm">
+                        <div class="form-group">
+                            <label for="returnBookId">Book ID:</label>
+                            <input type="text" id="returnBookId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnMemberId">Username:</label>
+                            <input type="text" id="returnMemberId" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Return Book</button>
+                    </form>
+                </section>
+                
+                <!-- Profile Section -->
+                <section id="profile" class="section">
+                    <h2>My Profile</h2>
+                    <div class="profile-layout">
+                        <div class="profile-details-card">
+                            <div class="profile-header">
+                                <div class="profile-avatar-large"><i class="fas fa-user-circle"></i></div>
+                                <div class="profile-name-email">
+                                    <h3 id="profileName">John Doe</h3>
+                                    <p id="profileEmail">john.doe@example.com</p>
+                                </div>
+                                <button class="btn btn-outline-dark" id="editProfileBtn"><i class="fas fa-edit"></i> Edit Profile</button>
+                            </div>
+                            <div class="profile-info-grid">
+                                <div class="info-item"><span class="info-label">Username</span><span class="info-value" id="profileUsername">johndoe</span></div>
+                                <div class="info-item"><span class="info-label">Member Since</span><span class="info-value" id="profileDate">January 1, 2023</span></div>
+                                <div class="info-item"><span class="info-label">Books Borrowed</span><span class="info-value" id="profileBooks">0</span></div>
+                            </div>
+                        </div>
+                        <div class="borrowed-books-card">
+                            <h4>Currently Borrowed Books</h4>
+                            <div id="borrowedBooksList"><p class="info-message">No books currently borrowed.</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Admin Panel Section -->
+                <section id="admin" class="section">
+                    <h2>Admin Panel</h2>
+                    <div class="admin-layout">
+                        <div class="admin-card">
+                            <h3>Add New Book</h3>
+                            <form id="addBookForm">
+                                <div class="form-group"><label for="addBookId">Book ID</label><input type="text" id="addBookId" required></div>
+                                <div class="form-group"><label for="addBookTitle">Title</label><input type="text" id="addBookTitle" required></div>
+                                <div class="form-group"><label for="addBookAuthor">Author</label><input type="text" id="addBookAuthor" required></div>
+                                <div class="form-group"><label for="addBookYear">Year</label><input type="number" id="addBookYear" required></div>
+                                <button type="submit" class="btn btn-primary">Add Book</button>
+                            </form>
+                        </div>
+                        <div class="admin-card">
+                            <h3>User Management</h3>
+                            <div class="table-container" id="adminUsersTable"></div>
+                        </div>
+                        <div class="admin-card full-width">
+                             <h3>Book Management</h3>
+                             <div class="table-container" id="adminBooksTable"></div>
+                        </div>
+                         <div class="admin-card full-width">
+                            <h3>Transaction History</h3>
+                            <div class="table-container" id="adminTransactionsTable"></div>
+                       </div>
+                        <div class="admin-card full-width">
+                            <h3>Admin Activity Log</h3>
+                            <div class="table-container" id="adminLogsTable"></div>
+                       </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Book Modal -->
+    <div id="editBookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeEditBookModal">&times;</span>
+            <h3>Edit Book Details</h3>
+            <form id="editBookForm">
+                <input type="hidden" id="editBookId">
+                <div class="form-group"><label for="editBookTitle">Title</label><input type="text" id="editBookTitle" required></div>
+                <div class="form-group"><label for="editBookAuthor">Author</label><input type="text" id="editBookAuthor" required></div>
+                <div class="form-group"><label for="editBookYear">Year</label><input type="number" id="editBookYear" required></div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeEditUserModal">&times;</span>
+            <h3>Edit User Details</h3>
+            <form id="editUserForm">
+                <input type="hidden" id="editUserId">
+                <div class="form-group"><label for="editUserFullName">Full Name</label><input type="text" id="editUserFullName" required></div>
+                <div class="form-group"><label for="editUserEmail">Email</label><input type="email" id="editUserEmail" required></div>
+                <div class="form-group"><label for="editUserUsername">Username</label><input type="text" id="editUserUsername" required></div>
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="confirmTitle">Confirm Action</h3>
+            <p id="confirmMessage">Are you sure you want to proceed?</p>
+            <div class="confirm-buttons">
+                <button id="confirmYesBtn" class="btn btn-danger">Yes</button>
+                <button id="confirmNoBtn" class="btn btn-outline-dark">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
